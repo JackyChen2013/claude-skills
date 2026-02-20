@@ -30,7 +30,7 @@ description: "Claude Code 配置文件密钥泄露扫描与修复工具。扫描
 |------|------|------|
 | `eyJ[A-Za-z0-9+/]{20,}` | JWT Token（Supabase anon key、service key 等） | `eyJhbGciOiJIUzI1NiIs...` |
 | `sk-[A-Za-z0-9]{20,}` | OpenAI / Anthropic API Key | `sk-ant-api03-...` |
-| `AIza[A-Za-z0-9_-]{35}` | Google API Key | `AIzaSyCgNaEh8b...` |
+| `AIza[A-Za-z0-9_-]{35}` | Google API Key | `AIzaSyXXXXXXXX...` |
 | `ghp_[A-Za-z0-9]{36}` | GitHub Personal Access Token | `ghp_xxxx` |
 | 密码出现在 `expect` 命令中 | SSH/服务器密码硬编码 | `send "mypassword\r"` |
 | URL 中含 `token=` 或 `key=` | 凭证拼接在 URL 里 | `?key=AIzaSy...` |
@@ -105,7 +105,7 @@ description: "Claude Code 配置文件密钥泄露扫描与修复工具。扫描
 - [文件路径:行号] 类型：JWT Token | 预览：eyJhbGci... | 建议：方案A（直接删除）
 
 ### 中危发现
-- [文件路径:行号] 类型：服务器IP | 预览：45.32.xx.xx | 建议：可保留，注意不要提交到公开仓库
+- [文件路径:行号] 类型：服务器IP | 预览：203.0.113.x | 建议：可保留，注意不要提交到公开仓库
 
 ### 无发现
 - ✓ ~/.claude/settings.json 未发现敏感信息
